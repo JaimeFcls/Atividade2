@@ -1,0 +1,24 @@
+//Requiringmodule
+
+const express = require('express')
+
+//Creatingexpressobject
+
+const api = express()
+
+//HandlingGETrequest
+
+api.get('/', (req, res) => {
+    res.send('A api está funcionando')
+    res.end()
+})
+
+//PortNumber
+
+const PORT = process.env.PORT || 4000;
+
+//ServerSetup
+
+api.listen(PORT, console.log(`O server rodou na porta : ${PORT}`));
+
+
